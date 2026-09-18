@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Patrick Boma</title>
+
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            Patrick Boma
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'projects' %}" class="active">Projects</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'skills' %}">Skills</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Projects Section -->
+    <main>
+
+        <section class="projects-section">
+
+            <!-- Page Heading -->
+            <div class="projects-heading">
+
+                <h1>MY PROJECTS</h1>
+
+                <p>
+                    A collection of projects I've designed, developed and worked on.
+                </p>
+
+            </div>
+
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+
+
+                <!-- Project 1: Smart Bin -->
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="{% static 'images/bin.png' %}"
+                            alt="Smart Bin IoT project">
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h2>Smart Bin</h2>
+
+                        <p>
+                            An IoT-based smart waste bin designed to detect
+                            waste levels and automatically control the lid.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Arduino</span>
+                            <span>IoT</span>
+                            <span>Sensors</span>
+                            <span>C/C++</span>
+
+                        </div>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Project 2: IoT Weather Station -->
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="{% static 'images/iot_weather_station.png' %}"
+                            alt="IoT Weather Station project">
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h2>IoT Weather Station</h2>
+
+                        <p>
+                            An IoT system for monitoring temperature,
+                            humidity, pressure, air quality and wind conditions.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Raspberry Pi</span>
+                            <span>Python</span>
+                            <span>IoT</span>
+                            <span>Sensors</span>
+
+                        </div>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Project 3: Portfolio Website -->
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="{% static 'images/portfolio_website.png' %}"
+                            alt="Portfolio website project">
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h2>Portfolio Website</h2>
+
+                        <p>
+                            A personal portfolio website designed to showcase
+                            my skills, projects, education and technical experience.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Project 4: Networking Lab -->
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="{% static 'images/networking_lab.png' %}"
+                            alt="Networking laboratory project">
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h2>Networking Lab</h2>
+
+                        <p>
+                            A practical networking environment for studying
+                            network configuration, troubleshooting and system connectivity.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Networking</span>
+                            <span>Linux</span>
+                            <span>Windows</span>
+                            <span>Cisco</span>
+
+                        </div>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Patrick Boma. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
