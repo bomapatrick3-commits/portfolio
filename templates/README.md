@@ -6,9 +6,6 @@ About
 
 The About page provides information about my background, education, technical interests, and the areas of technology I am interested in.
 
-My project page pictures
-![alt text](image-6.png)
-![alt text](image-7.png)
 About me page  pictures
 ![alt text](image-8.png)
 ![alt text](image-9.png)
