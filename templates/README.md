@@ -1,7 +1,17 @@
-figma pictures
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+Patrick Boma — Professional Portfolio
+BECE/22/ME/019
+ Website
+
+About
+
+The About page provides information about my background, education, technical interests, and the areas of technology I am interested in.
+
+My project page pictures
+![alt text](image-6.png)
+![alt text](image-7.png)
+About me page  pictures
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
