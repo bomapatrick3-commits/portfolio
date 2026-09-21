@@ -1,258 +1,388 @@
+
 <!DOCTYPE html>
-{% load static %}
-
 <html lang="en">
+{% load static %}
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Rivera — Portfolio</title>
-  <meta name="description" content="Premium portfolio of Alex Rivera — Product Designer & Creative Developer">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfolio website of Patrick Boma, an Electronics and Computer Engineering student interested in web development, networking, embedded systems and IoT.">
+
+    <title>Patrick Boma | Home</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Home page CSS -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
+
 <body>
-  <!-- Navigation -->
-  <header class="header">
-    <nav class="nav">
-      <a href="#" class="logo">AR</a>
-      <ul class="nav-links">
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Product Designer & Creative Developer</p>
-      <h1 class="hero-title">
-        Crafting digital<br>
-        experiences that<br>
-        <span class="hero-accent">feel intentional.</span>
-      </h1>
-      <p class="hero-subtitle">
-        I design and build refined interfaces for brands that value clarity, craft, and quiet confidence.
-      </p>
-      <div class="hero-actions">
-        <a href="#work" class="btn btn-primary">View selected work</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-orb"></div>
-      <div class="hero-grid"></div>
-    </div>
-  </section>
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <header class="site-header">
 
-  <!-- Marquee -->
-  <div class="marquee">
-    <div class="marquee-track">
-      <span>Brand Identity</span>
-      <span class="dot">·</span>
-      <span>Product Design</span>
-      <span class="dot">·</span>
-      <span>Web Experiences</span>
-      <span class="dot">·</span>
-      <span>Creative Direction</span>
-      <span class="dot">·</span>
-      <span>Brand Identity</span>
-      <span class="dot">·</span>
-      <span>Product Design</span>
-      <span class="dot">·</span>
-      <span>Web Experiences</span>
-      <span class="dot">·</span>
-      <span>Creative Direction</span>
-      <span class="dot">·</span>
-    </div>
-  </div>
+        <nav class="navbar">
 
-  <!-- Selected Work -->
-  <section id="work" class="section work">
-    <div class="section-header">
-      <p class="section-label">Selected Work</p>
-      <h2 class="section-title">Projects that define the practice</h2>
-    </div>
-    <div class="work-grid">
-      <article class="work-card work-card--large">
-        <div class="work-image">
-          <div class="work-placeholder" style="--hue: 220"></div>
-        </div>
-        <div class="work-meta">
-          <span class="work-tag">Product Design</span>
-          <h3 class="work-title">Lumina Finance</h3>
-          <p class="work-desc">A calm, high-trust banking experience for a next-generation wealth platform.</p>
-        </div>
-      </article>
-      <article class="work-card">
-        <div class="work-image">
-          <div class="work-placeholder" style="--hue: 160"></div>
-        </div>
-        <div class="work-meta">
-          <span class="work-tag">Brand & Web</span>
-          <h3 class="work-title">Atelier Studio</h3>
-          <p class="work-desc">Identity and digital presence for a boutique architecture firm.</p>
-        </div>
-      </article>
-      <article class="work-card">
-        <div class="work-image">
-          <div class="work-placeholder" style="--hue: 30"></div>
-        </div>
-        <div class="work-meta">
-          <span class="work-tag">Web Experience</span>
-          <h3 class="work-title">Orbit Magazine</h3>
-          <p class="work-desc">Editorial platform designed for long-form storytelling and discovery.</p>
-        </div>
-      </article>
-      <article class="work-card work-card--wide">
-        <div class="work-image">
-          <div class="work-placeholder" style="--hue: 280"></div>
-        </div>
-        <div class="work-meta">
-          <span class="work-tag">Creative Direction</span>
-          <h3 class="work-title">Nova Commerce</h3>
-          <p class="work-desc">End-to-end design system and storefront for a premium lifestyle brand.</p>
-        </div>
-      </article>
-    </div>
-    <div class="section-footer">
-      <a href="#" class="link-arrow">View all projects</a>
-    </div>
-  </section>
+            <!-- Logo / Name -->
+            <a href="{% url 'home' %}" class="logo">
+                Patrick Boma
+            </a>
 
-  <!-- About -->
-  <section id="about" class="section about">
-    <div class="about-grid">
-      <div class="about-content">
-        <p class="section-label">About</p>
-        <h2 class="section-title">Design with intention,<br>code with care.</h2>
-        <p class="about-text">
-          I'm Alex Rivera — a product designer and creative developer based in Lisbon. 
-          For the past eight years I've partnered with startups and established brands 
-          to create digital products that feel considered and human.
-        </p>
-        <p class="about-text">
-          My work sits at the intersection of visual design, interaction, and front-end 
-          craft. I believe the best experiences are the ones that get out of the way.
-        </p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-number">40+</span>
-            <span class="stat-label">Projects shipped</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">8</span>
-            <span class="stat-label">Years experience</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">12</span>
-            <span class="stat-label">Countries reached</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-visual">
-        <div class="about-frame">
-          <div class="about-portrait"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
 
-  <!-- Services -->
-  <section id="services" class="section services">
-    <div class="section-header">
-      <p class="section-label">Services</p>
-      <h2 class="section-title">How I can help</h2>
-    </div>
-    <div class="services-list">
-      <div class="service-item">
-        <span class="service-number">01</span>
-        <div class="service-content">
-          <h3 class="service-title">Product Design</h3>
-          <p class="service-desc">End-to-end product thinking — from research and flows to high-fidelity interfaces and design systems.</p>
-        </div>
-      </div>
-      <div class="service-item">
-        <span class="service-number">02</span>
-        <div class="service-content">
-          <h3 class="service-title">Brand Identity</h3>
-          <p class="service-desc">Visual systems that feel timeless and flexible — logos, typography, color, and brand guidelines.</p>
-        </div>
-      </div>
-      <div class="service-item">
-        <span class="service-number">03</span>
-        <div class="service-content">
-          <h3 class="service-title">Web Experiences</h3>
-          <p class="service-desc">Custom websites and marketing sites built with performance, accessibility, and motion in mind.</p>
-        </div>
-      </div>
-      <div class="service-item">
-        <span class="service-number">04</span>
-        <div class="service-content">
-          <h3 class="service-title">Creative Direction</h3>
-          <p class="service-desc">Strategic vision for campaigns, product launches, and digital presence that stay coherent across touchpoints.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                <li>
+                    <a href="{% url 'home' %}" class="active">Home</a>
+                </li>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <div class="contact-inner">
-      <p class="section-label">Contact</p>
-      <h2 class="contact-title">Let's make something<br>worth remembering.</h2>
-      <p class="contact-text">
-        Currently available for select freelance projects and collaborations.
-        Tell me about what you're building.
-      </p>
-      <a href="mailto:hello@alexrivera.design" class="btn btn-primary btn-large">hello@alexrivera.design</a>
-      <div class="contact-links">
-        <a href="#" class="social-link">LinkedIn</a>
-        <a href="#" class="social-link">Dribbble</a>
-        <a href="#" class="social-link">Behance</a>
-        <a href="#" class="social-link">Instagram</a>
-      </div>
-    </div>
-  </section>
+                <li>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-copy">© 2026 Alex Rivera. All rights reserved.</p>
-      <p class="footer-note">Designed & built with care.</p>
-    </div>
-  </footer>
+                <li>
+                    <a href="{% url 'projects' %}">Projects</a>
+                </li>
 
-  <script>
-    // Simple mobile menu toggle
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle?.addEventListener('click', () => {
-      navLinks.classList.toggle('is-open');
-      toggle.classList.toggle('is-active');
-    });
+                <li>
+                    <a href="{% url 'skills' %}">Skills</a>
+                </li>
 
-    // Smooth header on scroll
-    const header = document.querySelector('.header');
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-      const current = window.scrollY;
-      if (current > 50) {
-        header.classList.add('is-scrolled');
-      } else {
-        header.classList.remove('is-scrolled');
-      }
-      lastScroll = current;
-    });
-  </script>
-</body>
-</html>
+                <li>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+        <section class="hero">
+
+            <div class="hero-container">
+
+                <!-- LEFT SIDE -->
+                <div class="hero-content">
+
+                    <p class="hero-label">
+                        ELECTRONICS & COMPUTER ENGINEERING
+                    </p>
+
+                    <h1>
+                        Hi, I'm <span>Patrick Boma.</span>
+                    </h1>
+
+                    <h2>
+                        I build, learn and solve
+                        <br>
+                        problems with technology.
+                    </h2>
+
+                    <p class="hero-description">
+                        I am an Electronics and Computer Engineering student
+                        interested in web development, networking, embedded
+                        systems, IoT and practical technology solutions.
+                    </p>
+
+                    <!-- Hero Buttons -->
+                    <div class="hero-buttons">
+
+                        <a href="{% url 'projects' %}" class="btn btn-primary">
+                            View My Projects
+                            <span>→</span>
+                        </a>
+
+                        <a href="{% url 'contact' %}" class="btn btn-secondary">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+                <div class="hero-visual">
+
+                    <div class="profile-card">
+
+                        <div class="profile-image-container">
+
+                            <!-- Replace this with your own photo -->
+                            <img src="{% static 'images/patrick_profile.jpg' %}"
+                                 alt="Portrait of Patrick Boma"
+                                 class="profile-image">
+
+                        </div>
+
+                        <div class="profile-card-content">
+
+                            <p class="profile-card-label">
+                                CURRENTLY
+                            </p>
+
+                            <h3>
+                                Engineering Student
+                            </h3>
+
+                            <p>
+                                Exploring technology through
+                                practical projects and continuous learning.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUICK INTRO SECTION
+        ========================== -->
+        <section class="intro-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        WHAT I DO
+                    </p>
+
+                    <h2>
+                        Turning ideas into
+                        <span>practical solutions.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="intro-grid">
+
+                    <!-- Card 1 -->
+                    <article class="intro-card">
+
+                        <div class="card-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            Building responsive websites using HTML,
+                            CSS and JavaScript with a focus on clean
+                            structure and user experience.
+                        </p>
+
+                        <a href="skills.html">
+                            Explore Skills →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Card 2 -->
+                    <article class="intro-card">
+
+                        <div class="card-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Networking
+                        </h3>
+
+                        <p>
+                            Learning and practising network configuration,
+                            troubleshooting, virtualization and computer
+                            network technologies.
+                        </p>
+
+                        <a href="projects.html">
+                            View Projects →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Card 3 -->
+                    <article class="intro-card">
+
+                        <div class="card-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Embedded & IoT
+                        </h3>
+
+                        <p>
+                            Exploring electronics, embedded systems and
+                            IoT projects that connect hardware, software
+                            and real-world applications.
+                        </p>
+
+                        <a href="projects.html">
+                            See My Work →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURED PROJECTS
+        ========================== -->
+        <section class="featured-section">
+
+            <div class="section-container">
+
+                <div class="section-top">
+
+                    <div>
+
+                        <p class="section-label">
+                            FEATURED WORK
+                        </p>
+
+                        <h2>
+                            Projects I've
+                            <span>worked on.</span>
+                        </h2>
+
+                    </div>
+
+                    <a href="projects.html" class="view-all">
+                        View All Projects →
+                    </a>
+
+                </div>
+
+
+                <div class="featured-grid">
+
+                    <!-- Smart Bin -->
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="{% static 'images/iot_weather_station.png' %}"
+                                 alt="Smart Bin project">
+
+                            <span class="project-category">
+                                EMBEDDED / IoT
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Smart Bin
+                            </h3>
+
+                            <p>
+                                An intelligent waste bin concept using
+                                sensors and actuators to improve waste
+                                handling and user interaction.
+                            </p>
+
+                            <a href="project-smart-bin.html">
+                                View Project →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Networking Lab -->
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/networking-lab.jpg"
+                                 alt="Networking and virtualization lab">
+
+                            <span class="project-category">
+                                NETWORKING
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Networking & Virtualization Lab
+                            </h3>
+
+                            <p>
+                                A practical learning environment for
+                                exploring virtual machines, operating
+                                systems, networking and troubleshooting.
+                            </p>
+
+                            <a href="project-details.html">
+                                View Project →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Portfolio -->
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/portfolio.jpg"
+                                 alt="Portfolio website project">
+
+                            <span class="project-category">
+                                WEB DEVELOPMENT
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+```

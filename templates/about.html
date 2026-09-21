@@ -23,10 +23,10 @@
     ========================== -->
 
     <header class="navbar">
-
-        <div class="logo">
-            Patrick Boma
-        </div>
+        
+            <a href="{% url 'home' %}" class="logo">
+                Patrick Boma
+            </a>
 
 
         <nav>
@@ -34,28 +34,31 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html">
+                    <a href="{% url 'home' %}">
                         Home
                     </a>
                 </li>
 
 
                 <li>
-                    <a href="about.html" class="active">
+                    <a href="{% url 'about' %}" class="active">
                         About
                     </a>
                 </li>
 
 
                 <li>
-                    <a href="projects.html">
+                    <a href="{% url 'projects' %}">
                         Projects
                     </a>
                 </li>
-
+                
+                <li>
+                    <a href="{% url 'skills' %}">Skills</a>
+                </li>
 
                 <li>
-                    <a href="contact.html">
+                    <a href="{% url 'contact' %}">
                         Contact
                     </a>
                 </li>
@@ -143,7 +146,7 @@
                     </p>
 
 
-                    <a href="projects.html" class="about-button">
+                    <a href="{% url 'projects' %}" class="about-button">
                         View My Projects →
                     </a>
 
@@ -405,7 +408,7 @@
                 </p>
 
 
-                <a href="contact.html" class="cta-button">
+                <a href="{% url 'contact' %}" class="cta-button">
                     Contact Me →
                 </a>
 

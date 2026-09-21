@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-      {% load static %}
+{% load static %}
 
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
         <nav class="navbar">
 
             
-            <a href="index.html" class="logo">
+            <a href="{% url 'home' %}" class="logo">
                 Patrick Boma
             </a>
 
@@ -34,23 +34,23 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="{% url 'home' %}">Home</a>
                 </li>
 
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="{% url 'about' %}">About</a>
                 </li>
 
                 <li>
-                    <a href="projects.html">Projects</a>
+                    <a href="{% url 'projects' %}">Projects</a>
                 </li>
 
                 <li>
-                    <a href="skills.html">Skills</a>
+                    <a href="{% url 'skills' %}">Skills</a>
                 </li>
 
                 <li>
-                    <a href="contact.html" class="active">Contact</a>
+                    <a href="{% url 'contact' %}" class="active">Contact</a>
                 </li>
 
             </ul>
@@ -241,7 +241,7 @@
                                 id="name"
                                 name="name"
                                 placeholder="Enter your name"
-                                required
+                                
                             >
 
                             <small class="error-message" id="nameError"></small>
@@ -263,7 +263,7 @@
                                 id="email"
                                 name="email"
                                 placeholder="Enter your email"
-                                required
+                                
                             >
 
                             <small class="error-message" id="emailError"></small>
@@ -351,112 +351,10 @@
 
     </footer>
 
-
-
     
-
-    <script>
-
-        const contactForm = document.getElementById("contactForm");
-
-        const nameInput = document.getElementById("name");
-
-        const emailInput = document.getElementById("email");
-
-        const messageInput = document.getElementById("message");
-
-        const nameError = document.getElementById("nameError");
-
-        const emailError = document.getElementById("emailError");
-
-        const messageError = document.getElementById("messageError");
-
-        const successMessage = document.getElementById("successMessage");
-
-
-        contactForm.addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-
-           
-
-            nameError.textContent = "";
-
-            emailError.textContent = "";
-
-            messageError.textContent = "";
-
-            successMessage.textContent = "";
-
-
-            let valid = true;
-
-
-            // Check name
-
-            if (nameInput.value.trim() === "") {
-
-                nameError.textContent = "Please enter your name.";
-
-                valid = false;
-
-            }
-
-
-            // Check email
-
-            if (emailInput.value.trim() === "") {
-
-                emailError.textContent = "Please enter your email address.";
-
-                valid = false;
-
-            }
-            else if (!emailInput.validity.valid) {
-
-                emailError.textContent = "Please enter a valid email address.";
-
-                valid = false;
-
-            }
-
-
-            
-
-            if (messageInput.value.trim() === "") {
-
-                messageError.textContent = "Please enter your message.";
-
-                valid = false;
-
-            }
-            else if (messageInput.value.trim().length < 10) {
-
-                messageError.textContent =
-                    "Your message should contain at least 10 characters.";
-
-                valid = false;
-
-            }
-
-
-            
-
-            if (valid) {
-
-                successMessage.textContent =
-                    "Thank you! Your message has been prepared successfully.";
-
-                contactForm.reset();
-
-            }
-
-        });
-
-    </script>
-
+<script src="{% static 'js/contact.js' %}"></script>
+ 
 </body>
 
 </html>
-```
+

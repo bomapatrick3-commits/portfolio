@@ -1,4 +1,4 @@
-```css
+
 
 
 :root {
@@ -42,7 +42,10 @@ body {
     line-height: 1.6;
 }
 
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 .header {
@@ -72,15 +75,22 @@ body {
 
 
 .logo {
-    color: var(--text-color);
 
-    text-decoration: none;
+    font-size: 22px;
 
-    font-size: 24px;
+    font-weight: 800;
 
-    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    color: var(--primary-text);
+
+    transition: var(--transition);
 }
 
+
+.logo:hover {
+    color: var(--accent);
+}
 
 
 
@@ -547,4 +557,4 @@ body {
     }
 
 }
-```
+

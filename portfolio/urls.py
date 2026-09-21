@@ -25,4 +25,10 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('skills/', views.skills, name='skills'),
+    path('project_details/', views.project_details, name='project_details'),
+    path('404/', views.error_404, name='error_404'),
+    path('smart-bin/', views.smart_bin, name='smart_bin'),
+    path('weather-station/', views.weather_station, name='weather_station'),
+    path('portfolio-website/', views.portfolio_website, name='portfolio_website'),
+    path('networking-lab/', views.networking_lab, name='networking_lab'),
 ]

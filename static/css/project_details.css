@@ -1,0 +1,1306 @@
+
+/* =========================================
+   PROJECT DETAILS PAGE
+   Patrick Boma Portfolio
+========================================= */
+
+
+/* =========================================
+   1. CSS VARIABLES
+========================================= */
+
+:root {
+
+    --background: #0f172a;
+
+    --background-light: #111c32;
+
+    --card-background: #17233b;
+
+    --primary-text: #f8fafc;
+
+    --secondary-text: #94a3b8;
+
+    --accent: #38bdf8;
+
+    --accent-hover: #0ea5e9;
+
+    --border: #26344d;
+
+    --max-width: 1200px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================
+   2. RESET
+========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--background);
+
+    color: var(--primary-text);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button {
+
+    font-family: inherit;
+}
+
+
+/* =========================================
+   3. HEADER / NAVIGATION
+========================================= */
+
+.site-header {
+
+    width: 100%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(15, 23, 42, 0.95);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.navbar {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 22px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    transition: var(--transition);
+}
+
+
+.logo:hover {
+
+    color: var(--accent);
+}
+
+
+/* Navigation */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+
+    position: relative;
+
+    color: var(--secondary-text);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    color: var(--primary-text);
+}
+
+
+/* Active navigation line */
+
+.nav-links a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--accent);
+}
+
+
+/* Mobile menu */
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 25px;
+
+    height: 2px;
+
+    margin: 5px 0;
+
+    background: var(--primary-text);
+}
+
+
+/* =========================================
+   4. GENERAL CONTAINER
+========================================= */
+
+.project-container {
+
+    width: 100%;
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding-left: 30px;
+
+    padding-right: 30px;
+}
+
+
+/* =========================================
+   5. PROJECT HERO
+========================================= */
+
+.project-hero {
+
+    padding: 90px 0 80px;
+
+    text-align: center;
+}
+
+
+.project-label {
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+.project-hero h1 {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2.5px;
+}
+
+
+.project-hero h1 span {
+
+    color: var(--accent);
+
+    display: block;
+}
+
+
+.project-introduction {
+
+    max-width: 720px;
+
+    margin: 25px auto 50px;
+
+    color: var(--secondary-text);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* Main project image */
+
+.project-main-image {
+
+    width: 100%;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--card-background);
+}
+
+
+.project-main-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   6. PROJECT INFORMATION
+========================================= */
+
+.project-info-section {
+
+    padding-bottom: 90px;
+}
+
+
+.project-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.info-card {
+
+    min-height: 140px;
+
+    padding: 25px;
+
+    background: var(--card-background);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    transition: var(--transition);
+}
+
+
+.info-card:hover {
+
+    border-color: var(--accent);
+
+    transform: translateY(-3px);
+}
+
+
+.info-label {
+
+    color: var(--accent);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+}
+
+
+.info-card h3 {
+
+    color: var(--primary-text);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   7. PROJECT CONTENT SECTIONS
+========================================= */
+
+.project-section {
+
+    padding: 100px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.alternate-section {
+
+    background: var(--background-light);
+}
+
+
+.project-section-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+/* Section title */
+
+.section-title {
+
+    position: sticky;
+
+    top: 110px;
+}
+
+
+.section-number {
+
+    color: var(--accent);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.section-title h2 {
+
+    font-size: clamp(28px, 3vw, 40px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+
+/* Section content */
+
+.section-content {
+
+    max-width: 700px;
+}
+
+
+.section-content p {
+
+    color: var(--secondary-text);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+.section-content p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   8. MY CONTRIBUTION
+========================================= */
+
+.contribution-section {
+
+    padding: 100px 0;
+
+    background: var(--background);
+}
+
+
+.contribution-card {
+
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 70px;
+
+    padding: 50px;
+
+    background: var(--card-background);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+}
+
+
+.contribution-heading h2 {
+
+    font-size: 34px;
+
+    line-height: 1.2;
+}
+
+
+.contribution-content ul {
+
+    list-style: none;
+}
+
+
+.contribution-content li {
+
+    position: relative;
+
+    color: var(--secondary-text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    padding-left: 25px;
+
+    margin-bottom: 18px;
+}
+
+
+.contribution-content li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--accent);
+
+    font-weight: 700;
+}
+
+
+.contribution-content li:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   9. TECHNOLOGIES
+========================================= */
+
+.technology-section {
+
+    padding: 100px 0;
+
+    border-top: 1px solid var(--border);
+
+    background: var(--background-light);
+}
+
+
+.technology-heading {
+
+    margin-bottom: 35px;
+}
+
+
+.technology-heading h2 {
+
+    font-size: 34px;
+
+    line-height: 1.2;
+}
+
+
+.section-label {
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.technology-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.technology-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 10px 16px;
+
+    color: var(--primary-text);
+
+    background: var(--card-background);
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+
+.technology-tag:hover {
+
+    color: var(--accent);
+
+    border-color: var(--accent);
+}
+
+
+/* =========================================
+   10. PROJECT ACTIONS
+========================================= */
+
+.project-actions {
+
+    padding: 80px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.actions-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   11. BUTTONS
+========================================= */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 22px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border: 1px solid transparent;
+
+    transition: var(--transition);
+}
+
+
+.btn-primary {
+
+    color: #07111f;
+
+    background: var(--accent);
+}
+
+
+.btn-primary:hover {
+
+    background: var(--accent-hover);
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secondary {
+
+    color: var(--primary-text);
+
+    background: transparent;
+
+    border-color: var(--border);
+}
+
+
+.btn-secondary:hover {
+
+    color: var(--accent);
+
+    border-color: var(--accent);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   12. CALL TO ACTION
+========================================= */
+
+.cta-section {
+
+    padding: 100px 0;
+}
+
+
+.cta-card {
+
+    padding: 70px 40px;
+
+    text-align: center;
+
+    background: var(--card-background);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.cta-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    top: -120px;
+
+    right: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(56, 189, 248, 0.08);
+}
+
+
+.cta-card > * {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.cta-card h2 {
+
+    font-size: clamp(30px, 4vw, 45px);
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+}
+
+
+.cta-card h2 span {
+
+    color: var(--accent);
+}
+
+
+.cta-card > p:not(.section-label) {
+
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    color: var(--secondary-text);
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   13. FOOTER
+========================================= */
+
+.site-footer {
+
+    border-top: 1px solid var(--border);
+
+    padding: 30px 0;
+}
+
+
+.footer-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.footer-container p {
+
+    color: var(--secondary-text);
+
+    font-size: 12px;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+
+    color: var(--secondary-text);
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+
+.footer-links a:hover {
+
+    color: var(--accent);
+}
+
+
+/* =========================================
+   14. TABLET
+   <= 1000px
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .project-info-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .project-section-grid {
+
+        grid-template-columns:
+            1fr 1.5fr;
+
+        gap: 50px;
+    }
+
+
+    .contribution-card {
+
+        grid-template-columns:
+            1fr 1.5fr;
+
+        gap: 40px;
+    }
+
+
+    .project-main-image {
+
+        height: 420px;
+    }
+
+}
+
+
+/* =========================================
+   15. SMALL LAPTOP / TABLET
+   <= 900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+
+        gap: 20px;
+    }
+
+
+    .project-hero {
+
+        padding-top: 70px;
+    }
+
+
+    .project-main-image {
+
+        height: 380px;
+    }
+
+
+    .project-section-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .section-title {
+
+        position: static;
+    }
+
+
+    .contribution-card {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================
+   16. MOBILE
+   <= 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Navigation */
+
+    .navbar {
+
+        padding: 18px 20px;
+    }
+
+
+    .logo {
+
+        font-size: 19px;
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 69px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 10px 20px;
+
+        background: var(--background);
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    .nav-links.show {
+
+        display: flex;
+    }
+
+
+    .nav-links li {
+
+        width: 100%;
+    }
+
+
+    .nav-links a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 0;
+    }
+
+
+    .nav-links a.active::after {
+
+        display: none;
+    }
+
+
+    /* General container */
+
+    .project-container {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    /* Hero */
+
+    .project-hero {
+
+        padding: 65px 0 60px;
+    }
+
+
+    .project-hero h1 {
+
+        font-size: 38px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .project-introduction {
+
+        font-size: 14px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .project-main-image {
+
+        height: 250px;
+
+        border-radius: 8px;
+    }
+
+
+    /* Information */
+
+    .project-info-section {
+
+        padding-bottom: 60px;
+    }
+
+
+    .project-info-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-card {
+
+        min-height: auto;
+
+        padding: 22px;
+    }
+
+
+    /* Content sections */
+
+    .project-section {
+
+        padding: 70px 0;
+    }
+
+
+    .section-title h2 {
+
+        font-size: 29px;
+    }
+
+
+    .section-content p {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    /* Contribution */
+
+    .contribution-section {
+
+        padding: 70px 0;
+    }
+
+
+    .contribution-card {
+
+        padding: 30px 25px;
+    }
+
+
+    .contribution-heading h2 {
+
+        font-size: 29px;
+    }
+
+
+    /* Technologies */
+
+    .technology-section {
+
+        padding: 70px 0;
+    }
+
+
+    .technology-heading h2 {
+
+        font-size: 29px;
+    }
+
+
+    .technology-tag {
+
+        font-size: 12px;
+
+        padding: 9px 13px;
+    }
+
+
+    /* Buttons */
+
+    .project-actions {
+
+        padding: 60px 0;
+    }
+
+
+    .actions-wrapper {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .actions-wrapper .btn {
+
+        width: 100%;
+    }
+
+
+    /* CTA */
+
+    .cta-section {
+
+        padding: 70px 0;
+    }
+
+
+    .cta-card {
+
+        padding: 55px 25px;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================
+   17. SMALL PHONES
+   <= 400px
+========================================= */
+
+@media (max-width: 400px) {
+
+    .project-hero h1 {
+
+        font-size: 33px;
+    }
+
+
+    .project-main-image {
+
+        height: 210px;
+    }
+
+
+    .contribution-card {
+
+        padding: 25px 20px;
+    }
+
+}
+
+
+/* =========================================
+   18. ACCESSIBILITY
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline: 3px solid var(--accent);
+
+    outline-offset: 4px;
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+
+}
+

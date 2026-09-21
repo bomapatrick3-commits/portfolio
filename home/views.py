@@ -19,3 +19,25 @@ def about(request):
 
 def skills(request):
     return render(request, 'skills.html')
+    
+def project_details(request):
+    return render(request, 'project_details.html')
+
+
+def smart_bin(request):
+    return render(request, "smart-bin.html")
+
+
+def weather_station(request):
+    return render(request, "weather-station.html")
+
+
+def portfolio_website(request):
+    return render(request, "portfolio-website.html")
+
+
+def networking_lab(request):
+    return render(request, "networking-lab.html")
+
+def error_404(request, exception=None):
+        return render(request, '404.html', status=404)

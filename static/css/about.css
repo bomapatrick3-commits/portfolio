@@ -1,3 +1,22 @@
+:root {
+
+    --background: #0f172a;
+    --background-light: #111c32;
+
+    --card-background: #17233b;
+
+    --primary-text: #f8fafc;
+    --secondary-text: #94a3b8;
+
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+
+    --border: #26344d;
+
+    --max-width: 1200px;
+
+    --transition: 0.3s ease;
+}
 
 
 * {
@@ -22,7 +41,10 @@ body {
     min-height: 100vh;
 }
 
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 .navbar {
@@ -49,11 +71,20 @@ body {
 
 .logo {
 
-    font-size: 24px;
+    font-size: 22px;
 
-    font-weight: bold;
+    font-weight: 800;
 
-    color: white;
+    letter-spacing: -0.5px;
+
+    color: var(--primary-text);
+
+    transition: var(--transition);
+}
+
+
+.logo:hover {
+    color: var(--accent);
 }
 
 
