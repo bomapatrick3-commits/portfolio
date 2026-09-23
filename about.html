@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
 
 <head>
 
@@ -10,7 +9,7 @@
 
     <title>About Me | Patrick Boma</title>
 
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="static/css/about.css">
 
 </head>
 
@@ -22,7 +21,7 @@
 
     <header class="navbar">
         
-            <a href="{% url 'home' %}" class="logo">
+            <a href="index.html" class="logo">
                 Patrick Boma
             </a>
 
@@ -32,31 +31,31 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="{% url 'home' %}">
+                    <a href="index.html">
                         Home
                     </a>
                 </li>
 
 
                 <li>
-                    <a href="{% url 'about' %}" class="active">
+                    <a href="about.html" class="active">
                         About
                     </a>
                 </li>
 
 
                 <li>
-                    <a href="{% url 'projects' %}">
+                    <a href="projects.html">
                         Projects
                     </a>
                 </li>
                 
                 <li>
-                    <a href="{% url 'skills' %}">Skills</a>
+                    <a href="skills.html">Skills</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'contact' %}">
+                    <a href="contact.html">
                         Contact
                     </a>
                 </li>
@@ -104,7 +103,7 @@
                     <div class="profile-image">
 
                         <img
-                            src="{% static 'images/patrick_profile.jpg' %}"
+                            src="static/images/patrick_profile.jpg"
                             alt="Portrait of Patrick Boma">
 
                     </div>
@@ -144,7 +143,7 @@
                     </p>
 
 
-                    <a href="{% url 'projects' %}" class="about-button">
+                    <a href="projects.html" class="about-button">
                         View My Projects →
                     </a>
 
@@ -404,7 +403,7 @@
                 </p>
 
 
-                <a href="{% url 'contact' %}" class="cta-button">
+                <a href="contact.html" class="cta-button">
                     Contact Me →
                 </a>
 

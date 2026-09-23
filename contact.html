@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     <title>Contact | Patrick Boma</title>
 
     
-<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="static/css/contact.css">
 </head>
 
 
@@ -25,7 +25,7 @@
         <nav class="navbar">
 
             
-            <a href="{% url 'home' %}" class="logo">
+            <a href="index.html" class="logo">
                 Patrick Boma
             </a>
 
@@ -34,23 +34,23 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="{% url 'home' %}">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'about' %}">About</a>
+                    <a href="about.html">About</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'projects' %}">Projects</a>
+                    <a href="projects.html">Projects</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'skills' %}">Skills</a>
+                    <a href="skills.html">Skills</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'contact' %}" class="active">Contact</a>
+                    <a href="contact.html" class="active">Contact</a>
                 </li>
 
             </ul>
@@ -385,7 +385,7 @@
 
     
     
-<script src="{% static 'js/contact.js' %}"></script>
+<script src="static/js/contact.js"></script>
  
 </body>
 

@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
 <head>
     <meta charset="UTF-8">
 
@@ -21,7 +20,7 @@
           rel="stylesheet">
 
     
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="static/css/home.css">
 </head>
 
 <body>
@@ -32,7 +31,7 @@
         <nav class="navbar">
 
             
-            <a href="{% url 'home' %}" class="logo">
+            <a href="index.html" class="logo">
                 Patrick Boma
             </a>
 
@@ -40,23 +39,23 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="{% url 'home' %}" class="active">Home</a>
+                    <a href="index.html" class="active">Home</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'about' %}">About</a>
+                    <a href="about.html">About</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'projects' %}">Projects</a>
+                    <a href="projects.html">Projects</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'skills' %}">Skills</a>
+                    <a href="skills.html">Skills</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'contact' %}">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
 
             </ul>
@@ -110,12 +109,12 @@
                     <!-- Hero Buttons -->
                     <div class="hero-buttons">
 
-                        <a href="{% url 'projects' %}" class="btn btn-primary">
+                        <a href="projects.html" class="btn btn-primary">
                             View My Projects
                             <span>→</span>
                         </a>
 
-                        <a href="{% url 'contact' %}" class="btn btn-secondary">
+                        <a href="contact.html" class="btn btn-secondary">
                             Contact Me
                         </a>
 
@@ -132,7 +131,7 @@
                         <div class="profile-image-container">
 
                             
-                            <img src="{% static 'images/patrick_profile.jpg' %}"
+                            <img src="static/images/patrick_profile.jpg"
                                  alt="Portrait of Patrick Boma"
                                  class="profile-image">
 
@@ -226,7 +225,7 @@
                             network technologies.
                         </p>
 
-                        <a href="{% url 'portfolio_website' %}">
+                        <a href="portfolio-website.html">
                             View Projects →
                         </a>
 
@@ -282,7 +281,7 @@
 
                     </div>
 
-                    <a href="{% url 'projects' %}" class="view-all">
+                    <a href="projects.html" class="view-all">
                         View All Projects →
                     </a>
 
@@ -296,7 +295,7 @@
 
                         <div class="project-image">
 
-                            <img src="{% static 'images/iot_weather_station.png' %}"
+                            <img src="static/images/iot_weather_station.png"
                                  alt="Smart Bin project">
 
                             <span class="project-category">
@@ -317,7 +316,7 @@
                                 handling and user interaction.
                             </p>
 
-                            <a href="{% url 'smart_bin' %}">
+                            <a href="smart-bin.html">
                                 View Project →
                                 </a>
                     
@@ -332,7 +331,7 @@
 
                         <div class="project-image">
 
-                            <img src="{% static 'images/networking_lab.png' %}"
+                            <img src="static/images/networking_lab.png"
                                  alt="Networking and virtualization lab">
 
                             <span class="project-category">
@@ -353,7 +352,7 @@
                                 systems, networking and troubleshooting.
                             </p>
 
-                            <a href="{% url 'project_details' %}">
+                            <a href="networking-lab.html">
                                 View Project →
                             </a>
 
@@ -367,7 +366,7 @@
 
                         <div class="project-image">
 
-                            <img src="{% static 'images/portfolio_website.png' %}"
+                            <img src="static/images/portfolio_website.png"
                                  alt="Portfolio website project">
 
                             <span class="project-category">
@@ -379,6 +378,45 @@
                         <div class="project-content">
                             </div>
                             
-    
+   <footer class="site-footer">
+
+        <div class="project-container">
+
+
+            <div class="footer-container">
+
+
+                <p>
+                    © 2026 Patrick Boma.
+                    All rights reserved.
+                </p>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="projects.html">
+                        Projects
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>   
 
                       

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 
     <title>Projects | Patrick Boma</title>
 
-    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+    <link rel="stylesheet" href="static/css/projects.css">
 </head>
 
 <body>
@@ -25,23 +25,23 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="{% url 'home' %}">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'about' %}">About</a>
+                    <a href="about.html">About</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'projects' %}" class="active">Projects</a>
+                    <a href="projects.html" class="active">Projects</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'skills' %}">Skills</a>
+                    <a href="skills.html">Skills</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'contact' %}">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
 
             </ul>
@@ -77,7 +77,7 @@
                     <div class="project-image">
 
                         <img
-                            src="{% static 'images/bin.png' %}"
+                            src="static/images/bin.png"
                             alt="Smart Bin IoT project">
 
                     </div>
@@ -100,7 +100,7 @@
 
                         </div>
 
-                        <a href="{% url 'smart_bin' %}" class="project-link">
+                        <a href="smart-bin.html" class="project-link">
                             View Project →
                         </a>
 
@@ -116,7 +116,7 @@
                     <div class="project-image">
 
                         <img
-                            src="{% static 'images/iot_weather_station.png' %}"
+                            src="static/images/iot_weather_station.png"
                             alt="IoT Weather Station project">
 
                     </div>
@@ -139,7 +139,7 @@
 
                         </div>
 
-                        <a href="{% url 'weather_station' %}" class="project-link">
+                        <a href="weather-station.html" class="project-link">
                             View Project →
                         </a>
 
@@ -155,7 +155,7 @@
                     <div class="project-image">
 
                         <img
-                            src="{% static 'images/portfolio_website.png' %}"
+                            src="static/images/portfolio_website.png"
                             alt="Portfolio website project">
 
                     </div>
@@ -177,7 +177,7 @@
 
                         </div>
 
-                        <a href="{% url 'portfolio_website' %}" class="project-link">
+                        <a href="portfolio-website.html" class="project-link">
                             View Project →
                         </a>
 
@@ -193,7 +193,7 @@
                     <div class="project-image">
 
                         <img
-                            src="{% static 'images/networking_lab.png' %}"
+                            src="static/images/networking_lab.png"
                             alt="Networking laboratory project">
 
                     </div>
@@ -216,7 +216,7 @@
 
                         </div>
 
-                        <a href="{% url 'networking_lab' %}" class="project-link">
+                        <a href="networking-lab.html" class="project-link">
                             View Project →
                         </a>
 

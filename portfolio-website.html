@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
 
 <head>
 
@@ -19,7 +18,7 @@
 
     <title>Networking & Virtualization Lab | Patrick Boma</title>
 
-    
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -33,9 +32,9 @@
         rel="stylesheet"
     >
 
+    <!-- Project Details CSS -->
 
-
-    <link rel="stylesheet" href="{% static 'css/project_details.css' %}">
+    <link rel="stylesheet" href="static/css/project_details.css">
 
 </head>
 
@@ -50,34 +49,35 @@
         <nav class="navbar">
 
 
+            <!-- Logo -->
 
             <a
-                href="{% url 'home' %}"
+                href="index.html"
                 class="logo"
             >
                 Patrick Boma
             </a>
 
 
-           
+            
 
             <ul class="nav-links">
 
                 <li>
-                    <a href="{% url 'home' %}">
+                    <a href="index.html">
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a href="{% url 'about' %}">
+                    <a href="about.html">
                         About
                     </a>
                 </li>
 
                 <li>
                     <a
-                        href="{% url 'projects' %}"
+                        href="projects.html"
                         class="active"
                     >
                         Projects
@@ -85,13 +85,13 @@
                 </li>
 
                 <li>
-                    <a href="{% url 'skills' %}">
+                    <a href="skills.html">
                         Skills
                     </a>
                 </li>
 
                 <li>
-                    <a href="{% url 'contact' %}">
+                    <a href="contact.html">
                         Contact
                     </a>
                 </li>
@@ -99,7 +99,7 @@
             </ul>
 
 
-            
+           
 
             <button
                 class="menu-toggle"
@@ -123,14 +123,14 @@
     <main>
 
 
-        
+       
 
         <section class="project-hero">
 
             <div class="project-container">
 
 
-                
+                <!-- Small Label -->
 
                 <p class="project-label">
                     PROJECT DETAILS
@@ -156,12 +156,12 @@
                 </p>
 
 
-             
+        
 
                 <div class="project-main-image">
 
                     <img
-                        src="{% static 'images/networking_lab.png'%}"
+                        src="static/images/networking_lab.png"
                         alt="Networking and Virtualization Lab"
                     >
 
@@ -173,7 +173,7 @@
 
 
 
-    
+       
 
         <section class="project-info-section">
 
@@ -183,7 +183,6 @@
                 <div class="project-info-grid">
 
 
-                    
 
                     <div class="info-card">
 
@@ -198,7 +197,7 @@
                     </div>
 
 
-                
+                    
 
                     <div class="info-card">
 
@@ -229,6 +228,7 @@
                     </div>
 
 
+                    
 
                     <div class="info-card">
 
@@ -366,7 +366,7 @@
 
 
 
-    
+        
 
         <section class="contribution-section">
 
@@ -431,7 +431,7 @@
 
 
 
-    
+        
 
         <section class="technology-section">
 
@@ -491,7 +491,7 @@
 
 
 
-      
+        
 
         <section class="project-section">
 
@@ -554,6 +554,7 @@
 
 
 
+
         <section class="project-section alternate-section">
 
             <div class="project-container">
@@ -613,6 +614,7 @@
 
 
 
+        
 
         <section class="project-actions">
 
@@ -633,7 +635,7 @@
 
 
                     <a
-                        href="#"
+                        href="https://github.com/bomapatrick3-commits/Portfolio_website.git"
                         class="btn btn-primary"
                     >
 
@@ -650,7 +652,6 @@
 
 
 
-    
 
         <section class="cta-section">
 
@@ -700,6 +701,8 @@
     </main>
 
 
+
+    
 
     <footer class="site-footer">
 
@@ -777,4 +780,4 @@
 </body>
 
 </html>
-```
+
