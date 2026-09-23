@@ -1,6 +1,4 @@
-/* =========================
-   GENERAL STYLES
-========================= */
+
 :root {
 
     --background: #0f172a;
@@ -45,9 +43,7 @@ a {
     color: inherit;
 }
 
-/* =========================
-   NAVIGATION BAR
-========================= */
+
 
 .navbar {
     width: 100%;
@@ -65,7 +61,6 @@ a {
 }
 
 
-/* Logo */
 
 .logo {
 
@@ -85,7 +80,7 @@ a {
     color: var(--accent);
 }
 
-/* Navigation links */
+
 
 .nav-links {
     display: flex;
@@ -111,16 +106,13 @@ a {
 }
 
 
-/* Active page */
+
 
 .nav-links a.active {
     color: #6366f1;
 }
 
 
-/* =========================
-   PROJECTS SECTION
-========================= */
 
 .projects-section {
     width: 84%;
@@ -133,9 +125,7 @@ a {
 }
 
 
-/* =========================
-   PAGE HEADING
-========================= */
+
 
 .projects-heading {
     text-align: center;
@@ -164,9 +154,7 @@ a {
 }
 
 
-/* =========================
-   PROJECT GRID
-========================= */
+
 
 .projects-grid {
 
@@ -178,9 +166,7 @@ a {
 }
 
 
-/* =========================
-   PROJECT CARD
-========================= */
+
 
 .project-card {
 
@@ -197,7 +183,6 @@ a {
 }
 
 
-/* Card hover effect */
 
 .project-card:hover {
 
@@ -208,9 +193,6 @@ a {
 }
 
 
-/* =========================
-   PROJECT IMAGE
-========================= */
 
 .project-image {
 
@@ -236,7 +218,7 @@ a {
 }
 
 
-/* Image zoom when card is hovered */
+
 
 .project-card:hover .project-image img {
 
@@ -244,9 +226,7 @@ a {
 }
 
 
-/* =========================
-   PROJECT CONTENT
-========================= */
+
 
 .project-content {
 
@@ -276,9 +256,7 @@ a {
 }
 
 
-/* =========================
-   TECHNOLOGY TAGS
-========================= */
+
 
 .project-tags {
 
@@ -308,9 +286,7 @@ a {
 }
 
 
-/* =========================
-   VIEW PROJECT LINK
-========================= */
+
 
 .project-link {
 
@@ -336,27 +312,144 @@ a {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
 
-.footer {
 
-    text-align: center;
 
-    padding: 25px;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-
-    color: #64748b;
-
-    font-size: 14px;
+.site-footer {
+    background-color: #0b1120;
+    border-top: 1px solid #334155;
+    padding: 25px 0;
+    margin-top: 80px;
 }
 
 
-/* =========================
-   TABLET
-========================= */
+
+
+.site-footer .project-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+.footer-container p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+
+
+.footer-links a:hover {
+    color: #38bdf8;
+}
+
+
+
+.footer-links a:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+
+
+
+@media (max-width: 800px) {
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        gap: 25px;
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+
+    .site-footer {
+        padding: 30px 0;
+        margin-top: 50px;
+    }
+
+    .footer-container {
+        gap: 18px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 22px;
+    }
+
+    .footer-container p {
+        font-size: 13px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+}
+
+
+
+
+@media (max-width: 350px) {
+
+    .site-footer .project-container {
+        width: 92%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+
 
 @media (max-width: 900px) {
 
@@ -389,9 +482,7 @@ a {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+
 
 @media (max-width: 600px) {
 

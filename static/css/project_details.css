@@ -1,13 +1,6 @@
 
-/* =========================================
-   PROJECT DETAILS PAGE
-   Patrick Boma Portfolio
-========================================= */
 
 
-/* =========================================
-   1. CSS VARIABLES
-========================================= */
 
 :root {
 
@@ -33,9 +26,6 @@
 }
 
 
-/* =========================================
-   2. RESET
-========================================= */
 
 * {
 
@@ -89,9 +79,7 @@ button {
 }
 
 
-/* =========================================
-   3. HEADER / NAVIGATION
-========================================= */
+
 
 .site-header {
 
@@ -127,7 +115,6 @@ button {
 }
 
 
-/* Logo */
 
 .logo {
 
@@ -147,7 +134,6 @@ button {
 }
 
 
-/* Navigation */
 
 .nav-links {
 
@@ -202,7 +188,6 @@ button {
 }
 
 
-/* Mobile menu */
 
 .menu-toggle {
 
@@ -232,9 +217,6 @@ button {
 }
 
 
-/* =========================================
-   4. GENERAL CONTAINER
-========================================= */
 
 .project-container {
 
@@ -250,9 +232,7 @@ button {
 }
 
 
-/* =========================================
-   5. PROJECT HERO
-========================================= */
+
 
 .project-hero {
 
@@ -340,9 +320,7 @@ button {
 }
 
 
-/* =========================================
-   6. PROJECT INFORMATION
-========================================= */
+
 
 .project-info-section {
 
@@ -411,9 +389,7 @@ button {
 }
 
 
-/* =========================================
-   7. PROJECT CONTENT SECTIONS
-========================================= */
+
 
 .project-section {
 
@@ -441,7 +417,7 @@ button {
 }
 
 
-/* Section title */
+
 
 .section-title {
 
@@ -473,7 +449,7 @@ button {
 }
 
 
-/* Section content */
+
 
 .section-content {
 
@@ -499,9 +475,7 @@ button {
 }
 
 
-/* =========================================
-   8. MY CONTRIBUTION
-========================================= */
+
 
 .contribution-section {
 
@@ -579,9 +553,6 @@ button {
 }
 
 
-/* =========================================
-   9. TECHNOLOGIES
-========================================= */
 
 .technology-section {
 
@@ -661,9 +632,6 @@ button {
 }
 
 
-/* =========================================
-   10. PROJECT ACTIONS
-========================================= */
 
 .project-actions {
 
@@ -685,9 +653,6 @@ button {
 }
 
 
-/* =========================================
-   11. BUTTONS
-========================================= */
 
 .btn {
 
@@ -749,9 +714,7 @@ button {
 }
 
 
-/* =========================================
-   12. CALL TO ACTION
-========================================= */
+
 
 .cta-section {
 
@@ -833,9 +796,7 @@ button {
 }
 
 
-/* =========================================
-   13. FOOTER
-========================================= */
+
 
 .site-footer {
 
@@ -889,10 +850,7 @@ button {
 }
 
 
-/* =========================================
-   14. TABLET
-   <= 1000px
-========================================= */
+
 
 @media (max-width: 1000px) {
 
@@ -929,10 +887,7 @@ button {
 }
 
 
-/* =========================================
-   15. SMALL LAPTOP / TABLET
-   <= 900px
-========================================= */
+
 
 @media (max-width: 900px) {
 
@@ -978,10 +933,7 @@ button {
 }
 
 
-/* =========================================
-   16. MOBILE
-   <= 600px
-========================================= */
+
 
 @media (max-width: 600px) {
 
@@ -1059,7 +1011,6 @@ button {
     }
 
 
-    /* General container */
 
     .project-container {
 
@@ -1101,7 +1052,6 @@ button {
     }
 
 
-    /* Information */
 
     .project-info-section {
 
@@ -1123,7 +1073,7 @@ button {
     }
 
 
-    /* Content sections */
+    
 
     .project-section {
 
@@ -1145,7 +1095,7 @@ button {
     }
 
 
-    /* Contribution */
+    
 
     .contribution-section {
 
@@ -1165,7 +1115,6 @@ button {
     }
 
 
-    /* Technologies */
 
     .technology-section {
 
@@ -1187,7 +1136,7 @@ button {
     }
 
 
-    /* Buttons */
+    
 
     .project-actions {
 
@@ -1209,7 +1158,7 @@ button {
     }
 
 
-    /* CTA */
+    
 
     .cta-section {
 
@@ -1223,14 +1172,140 @@ button {
     }
 
 
-    /* Footer */
+
+ 
+
+.site-footer {
+    background-color: #0b1120;
+    border-top: 1px solid #334155;
+    padding: 25px 0;
+    margin-top: 80px;
+}
+
+
+
+
+.site-footer .project-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+.footer-container p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+
+
+.footer-links a:hover {
+    color: #38bdf8;
+}
+
+
+
+.footer-links a:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+
+
+
+@media (max-width: 800px) {
 
     .footer-container {
-
         flex-direction: column;
-
         text-align: center;
+        gap: 20px;
     }
+
+    .footer-links {
+        gap: 25px;
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+
+    .site-footer {
+        padding: 30px 0;
+        margin-top: 50px;
+    }
+
+    .footer-container {
+        gap: 18px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 22px;
+    }
+
+    .footer-container p {
+        font-size: 13px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+}
+
+
+
+
+@media (max-width: 350px) {
+
+    .site-footer .project-container {
+        width: 92%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+```
+
 
 
     .footer-links {
@@ -1243,10 +1318,6 @@ button {
 }
 
 
-/* =========================================
-   17. SMALL PHONES
-   <= 400px
-========================================= */
 
 @media (max-width: 400px) {
 
@@ -1270,9 +1341,6 @@ button {
 }
 
 
-/* =========================================
-   18. ACCESSIBILITY
-========================================= */
 
 a:focus-visible,
 button:focus-visible {
@@ -1283,7 +1351,6 @@ button:focus-visible {
 }
 
 
-/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
 

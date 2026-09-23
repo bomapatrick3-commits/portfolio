@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Makes the website responsive on phones -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
@@ -20,25 +20,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
           rel="stylesheet">
 
-    <!-- Home page CSS -->
+    
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER / NAVIGATION
-    ========================== -->
+   
     <header class="site-header">
 
         <nav class="navbar">
 
-            <!-- Logo / Name -->
+            
             <a href="{% url 'home' %}" class="logo">
                 Patrick Boma
             </a>
 
-            <!-- Navigation Links -->
+            
             <ul class="nav-links">
 
                 <li>
@@ -63,7 +61,7 @@
 
             </ul>
 
-            <!-- Mobile Menu Button -->
+            
             <button class="menu-toggle"
                     aria-label="Open navigation menu"
                     aria-expanded="false">
@@ -81,14 +79,12 @@
 
     <main>
 
-        <!-- =========================
-             HERO SECTION
-        ========================== -->
+        
         <section class="hero">
 
             <div class="hero-container">
 
-                <!-- LEFT SIDE -->
+                
                 <div class="hero-content">
 
                     <p class="hero-label">
@@ -128,14 +124,14 @@
                 </div>
 
 
-                <!-- RIGHT SIDE -->
+                
                 <div class="hero-visual">
 
                     <div class="profile-card">
 
                         <div class="profile-image-container">
 
-                            <!-- Replace this with your own photo -->
+                            
                             <img src="{% static 'images/patrick_profile.jpg' %}"
                                  alt="Portrait of Patrick Boma"
                                  class="profile-image">
@@ -168,9 +164,7 @@
         </section>
 
 
-        <!-- =========================
-             QUICK INTRO SECTION
-        ========================== -->
+        
         <section class="intro-section">
 
             <div class="section-container">
@@ -215,7 +209,7 @@
                     </article>
 
 
-                    <!-- Card 2 -->
+                
                     <article class="intro-card">
 
                         <div class="card-number">
@@ -232,14 +226,14 @@
                             network technologies.
                         </p>
 
-                        <a href="projects.html">
+                        <a href="{% url 'portfolio_website' %}">
                             View Projects →
                         </a>
 
                     </article>
 
 
-                    <!-- Card 3 -->
+                    
                     <article class="intro-card">
 
                         <div class="card-number">
@@ -269,9 +263,6 @@
         </section>
 
 
-        <!-- =========================
-             FEATURED PROJECTS
-        ========================== -->
         <section class="featured-section">
 
             <div class="section-container">
@@ -291,7 +282,7 @@
 
                     </div>
 
-                    <a href="projects.html" class="view-all">
+                    <a href="{% url 'projects' %}" class="view-all">
                         View All Projects →
                     </a>
 
@@ -300,7 +291,7 @@
 
                 <div class="featured-grid">
 
-                    <!-- Smart Bin -->
+                   
                     <article class="project-card">
 
                         <div class="project-image">
@@ -326,21 +317,22 @@
                                 handling and user interaction.
                             </p>
 
-                            <a href="project-smart-bin.html">
+                            <a href="{% url 'smart_bin' %}">
                                 View Project →
-                            </a>
+                                </a>
+                    
 
                         </div>
 
                     </article>
 
 
-                    <!-- Networking Lab -->
+                    
                     <article class="project-card">
 
                         <div class="project-image">
 
-                            <img src="images/networking-lab.jpg"
+                            <img src="{% static 'images/networking_lab.png' %}"
                                  alt="Networking and virtualization lab">
 
                             <span class="project-category">
@@ -361,7 +353,7 @@
                                 systems, networking and troubleshooting.
                             </p>
 
-                            <a href="project-details.html">
+                            <a href="{% url 'project_details' %}">
                                 View Project →
                             </a>
 
@@ -370,12 +362,12 @@
                     </article>
 
 
-                    <!-- Portfolio -->
+                    
                     <article class="project-card">
 
                         <div class="project-image">
 
-                            <img src="images/portfolio.jpg"
+                            <img src="{% static 'images/portfolio_website.png' %}"
                                  alt="Portfolio website project">
 
                             <span class="project-category">
@@ -385,4 +377,8 @@
                         </div>
 
                         <div class="project-content">
-```
+                            </div>
+                            
+    
+
+                      
