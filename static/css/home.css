@@ -39,7 +39,7 @@ body {
 
     font-family: "Inter", sans-serif;
 
-    background: green;
+    background: var(--background);
 
     color: var(--primary-text);
 
